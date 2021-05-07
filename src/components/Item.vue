@@ -3,7 +3,7 @@
     <div
       class="order-item bg-opacity-30 text-center h-14 w-full pt-2 rounded-md"
     >
-      <div class="flex flex-row items-center justify-center gap-4">
+      <div class="flex flex-row items-center justify-center gap-2">
         <van-icon class="w-10" :name="parentInfo.icon"></van-icon>
         <span class="text-1xl font-mono">{{ parentInfo.name }}</span>
       </div>

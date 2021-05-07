@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import OrderItem from '../components/OrderItem.vue';
+import OrderItem from '../components/Item.vue';
 
-import WelfareIcon from '../assets/icon/welfare.png';
-import DeliverIcon from '../assets/icon/deliver.png';
-import HelpIcon from '../assets/icon/help.png';
-import AsideIcon from '../assets/icon/aside.png';
-import FoodIcon from '../assets/icon/food.png';
+import WelfareIcon from '../assets/icon/order/welfare.png';
+import DeliverIcon from '../assets/icon/order/deliver.png';
+import HelpIcon from '../assets/icon/order/help.png';
+import AsideIcon from '../assets/icon/order/aside.png';
+import FoodIcon from '../assets/icon/order/food.png';
 
 export default {
   data() {
