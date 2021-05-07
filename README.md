@@ -1,24 +1,2 @@
-# helper_helper
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# :sparkles: helper_helper
+我的帮帮校园互助项目的前端部分 - 迁移自小程序端
