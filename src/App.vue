@@ -1,32 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <my-header></my-header>
+    <router-view class=""></router-view>
+    <bottom-nav class="fixed bottom-0"></bottom-nav>
   </div>
 </template>
 
+<script>
+import Vue from 'vue';
+import { Icon } from 'vant';
+import router from './router/index';
+import MyHeader from './components/Header.vue';
+import BottomNav from './components/BottomNav.vue';
+
+Vue.use(Icon);
+
+export default {
+  components: {
+    MyHeader,
+    BottomNav,
+  },
+  mounted() {
+    this.$eventBus.$on('changeRoute', (reply) => {
+      this.$router.push(reply.path);
+    });
+    this.$eventBus.$on('replaceRoute', (reply) => {
+      this.$router.replace(reply.path);
+    });
+  },
+  router,
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
