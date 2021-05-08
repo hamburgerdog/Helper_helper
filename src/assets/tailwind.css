@@ -3,3 +3,9 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer components {
+  .item-box-border {
+    @apply  border-b border-opacity-20 border-gray-200;
+  }
+}

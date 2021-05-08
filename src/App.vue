@@ -2,7 +2,7 @@
   <div id="app">
     <my-header></my-header>
     <router-view></router-view>
-    <bottom-nav class="fixed bottom-0"></bottom-nav>
+    <bottom-nav class="fixed bottom-0 bg-white"></bottom-nav>
   </div>
 </template>
 

@@ -2,7 +2,8 @@
   <div class="p-2 flex flex-col items-center">
     <van-image
       class="w-68 rounded-xl overflow-hidden"
-      fit="cover"
+      height="8rem"
+      fit="fill"
       src="https://img01.yzcdn.cn/vant/cat.jpeg"
     />
     <div class="grid grid-cols-2 w-full justify-around gap-2 mt-2">
