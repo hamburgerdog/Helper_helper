@@ -2,6 +2,7 @@
   <div>
     <div
       class="order-item bg-opacity-30 text-center h-14 w-full pt-2 rounded-md"
+      @click="doRouter(parentInfo.path)"
     >
       <div class="flex flex-row items-center justify-center gap-2">
         <van-icon class="w-10" :name="parentInfo.icon"></van-icon>
@@ -14,6 +15,12 @@
 <script>
 export default {
   props: ['parentInfo'],
+  methods: {
+    doRouter(path) {
+      console.log(path);
+      this.$router.push(path);
+    },
+  },
 };
 </script>
 

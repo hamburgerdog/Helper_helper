@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <my-header></my-header>
+  <div id="app" class="pt-12 pb-16">
+    <my-header class="fixed top-0 w-full"></my-header>
     <router-view></router-view>
     <bottom-nav class="fixed bottom-0 bg-white"></bottom-nav>
   </div>
