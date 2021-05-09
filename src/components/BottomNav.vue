@@ -63,17 +63,10 @@ export default {
       this.navs[index].icon = icons[index];
     },
     clearActiveClass() {
-      let i = NaN;
       //  类数组应当先转换 根据类名清除特定节点数据
-      this.$refs.navs.forEach((nav, index) => {
-        if (Array.from(nav.classList).includes('active')) {
-          i = index;
-        }
+      this.$refs.navs.forEach((value) => {
+        value.classList.remove('active');
       });
-      this.$refs.navs[i].className = this.$refs.navs[i].className.slice(
-        0,
-        -' active'.length,
-      );
     },
     //  编程式更换路由，由于使用了png做图标，这是无奈之举，如果有可能图标尽量选择可被css控制的
     changeRoute(nav) {
@@ -81,7 +74,7 @@ export default {
       this.clearActiveClass();
       this.$router.replace(nav.path);
       this.changeIcon(this.navActiveIcons, nav.id);
-      this.$refs.navs[nav.id].className += ' active';
+      this.$refs.navs[nav.id].classList.add('active');
     },
   },
   //  挂载时需要根据当前路由先行更新状态栏
@@ -91,7 +84,7 @@ export default {
       if (nav.path === this.$route.path) id = index;
     });
     this.changeIcon(this.navActiveIcons, id);
-    this.$refs.navs[id].className += ' active';
+    this.$refs.navs[id].classList.add('active');
   },
 };
 </script>
