@@ -1,11 +1,14 @@
 <template>
   <div>
-    <header-item :HeaderRouterItems="routers"></header-item>
+    <router-header class="fixed w-full z-20" :HeaderRouterItems="routers"></router-header>
+    <div class="pt-8 z-10">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import HeaderItem from '../../components/HeadRouterItem.vue';
+import RouterHeader from '../../components/DetailRouterHeader.vue';
 
 export default {
   data() {
@@ -14,33 +17,33 @@ export default {
         {
           id: 0,
           name: '帮帮公益',
-          path: '/detail/helper',
+          path: '/detail/welfare',
         },
         {
           id: 1,
           name: '帮帮快递',
-          path: '/detail0',
+          path: '/detail/deliver',
         },
         {
           id: 2,
           name: '帮帮求助',
-          path: '/detail1',
+          path: '/detail/helper',
         },
         {
           id: 3,
           name: '帮帮闲置',
-          path: '/detail2',
+          path: '/detail/aside',
         },
         {
           id: 4,
           name: '帮帮外卖',
-          path: '/detail3',
+          path: '/detail/food',
         },
       ],
     };
   },
   components: {
-    HeaderItem,
+    RouterHeader,
   },
 };
 </script>

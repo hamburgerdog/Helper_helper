@@ -13,7 +13,6 @@
         <p class="leading-loose item-p w-16 text-xs">{{ item.name }}</p>
       </router-link>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 

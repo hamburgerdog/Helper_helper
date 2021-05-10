@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import OrderItem from '../components/Item.vue';
+import OrderItem from '../components/PageItem.vue';
 
 import WelfareIcon from '../assets/icon/order/welfare.png';
 import DeliverIcon from '../assets/icon/order/deliver.png';

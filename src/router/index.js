@@ -3,8 +3,12 @@ import VueRouter from 'vue-router';
 import Order from '../views/Order.vue';
 import Home from '../views/Home.vue';
 import Setting from '../views/Setting.vue';
-import HomeDetail from '../views/detail/HomeDetail.vue';
+import HomeDetail from '../views/detail/DetailRouteView.vue';
+import WelfareDetail from '../views/detail/Welfare.vue';
+import DeliverDetail from '../views/detail/Deliver.vue';
 import HelperDetail from '../views/detail/Helper.vue';
+import AsideDetail from '../views/detail/Aside.vue';
+import FoodDetail from '../views/detail/Food.vue';
 
 Vue.use(VueRouter);
 Vue.prototype.$eventBus = new Vue();
@@ -31,8 +35,24 @@ const routes = [
     component: HomeDetail,
     children: [
       {
+        path: 'welfare',
+        component: WelfareDetail,
+      },
+      {
+        path: 'deliver',
+        component: DeliverDetail,
+      },
+      {
         path: 'helper',
         component: HelperDetail,
+      },
+      {
+        path: 'aside',
+        component: AsideDetail,
+      },
+      {
+        path: 'food',
+        component: FoodDetail,
       },
     ],
   },

@@ -10,8 +10,8 @@
 import Vue from 'vue';
 import { Icon, Image as VanImage } from 'vant';
 import router from './router/index';
-import MyHeader from './components/Header.vue';
-import BottomNav from './components/BottomNav.vue';
+import MyHeader from './components/AppHeader.vue';
+import BottomNav from './components/AppBottomNav.vue';
 
 Vue.use(Icon);
 Vue.use(VanImage);

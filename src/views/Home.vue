@@ -23,14 +23,14 @@
 </template>
 
 <script>
-import HomeItem from '../components/Item.vue';
+import HomeItem from '../components/PageItem.vue';
 
-import HomeWelfare from '../assets/icon/home/welfare.png';
-import HomeAside from '../assets/icon/home/aside.png';
-import HomeFood from '../assets/icon/home/food.png';
-import HomeHelp from '../assets/icon/home/help.png';
-import HomePlay from '../assets/icon/home/play.png';
-import HomeDeliver from '../assets/icon/home/deliver.png';
+import HomeWelfareIcon from '../assets/icon/home/welfare.png';
+import HomeAsideIcon from '../assets/icon/home/aside.png';
+import HomeFoodIcon from '../assets/icon/home/food.png';
+import HomeHelpIcon from '../assets/icon/home/help.png';
+import HomePlayIcon from '../assets/icon/home/play.png';
+import HomeDeliverIcon from '../assets/icon/home/deliver.png';
 import opt from '../assets/icon/home/operation.png';
 
 export default {
@@ -39,39 +39,39 @@ export default {
       HomeItems: [
         {
           id: 1,
-          icon: HomeWelfare,
+          icon: HomeWelfareIcon,
           name: '帮帮公益',
-          path: '/detail/helper',
+          path: '/detail/welfare',
         },
         {
           id: 2,
-          icon: HomeDeliver,
+          icon: HomeDeliverIcon,
           name: '帮帮快递',
-          path: '/detail/helper',
+          path: '/detail/deliver',
         },
         {
           id: 3,
-          icon: HomeHelp,
+          icon: HomeHelpIcon,
           name: '帮帮求助',
           path: '/detail/helper',
         },
         {
           id: 4,
-          icon: HomeAside,
+          icon: HomeAsideIcon,
           name: '帮帮闲置',
-          path: '/detail/helper',
+          path: '/detail/aside',
         },
         {
           id: 5,
-          icon: HomeFood,
+          icon: HomeFoodIcon,
           name: '帮帮外卖',
-          path: '/detail/helper',
+          path: '/detail/food',
         },
         {
           id: 6,
-          icon: HomePlay,
+          icon: HomePlayIcon,
           name: '吃喝玩乐',
-          path: '/detail/helper',
+          path: '/home',
         },
       ],
       opt,
