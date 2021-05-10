@@ -1,8 +1,11 @@
 <template>
-  <div class="flex flex-col gap-3 p-2 mt-1">
-    <div class="w-full " v-for="OrderItem in OrderItems" :key="OrderItem.id">
-      <order-item :parentInfo="OrderItem"></order-item>
+  <div>
+    <div class="flex flex-col gap-3 p-2 mt-1">
+      <div class="w-full" v-for="OrderItem in OrderItems" :key="OrderItem.id">
+        <order-item :parentInfo="OrderItem"></order-item>
+      </div>
     </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -49,6 +52,9 @@ export default {
   },
   components: {
     OrderItem,
+  },
+  mounted() {
+    this.$eventBus.$emit('changeHeaderName', '帮帮订单');
   },
 };
 </script>

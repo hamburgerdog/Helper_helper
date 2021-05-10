@@ -6,7 +6,19 @@
     @apply border-b border-opacity-20 border-gray-200;
   }
   .header-top {
-    @apply fixed w-full ;
+    @apply fixed w-full;
     top: 4.8rem;
+  }
+  .detail-container{
+    @apply bg-white rounded-lg m-2 pt-2 pb-2;
+  }
+  .detail-box {
+    @apply flex justify-between items-center text-sm border-b border-gray-200 p-2 pt-0;
+  }
+  .detail-title {
+    @apply text-gray-800 overflow-hidden overflow-ellipsis w-3/4;
+  }
+  .detail-msg {
+    @apply text-xs pl-2 pr-2 text-gray-500 mt-4;
   }
 }

@@ -1,9 +1,19 @@
 <template>
-  <div></div>
+  <div>
+    <detail-money-item></detail-money-item>
+  </div>
 </template>
 
 <script>
-export default {};
+import DetailMoneyItem from '../../components/DetailMoneyItem.vue';
+
+export default {
+  components: { DetailMoneyItem },
+
+  mounted() {
+    this.$eventBus.$emit('changeHeaderName', '帮帮快递');
+  },
+};
 </script>
 
 <style>

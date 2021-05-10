@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-white rounded-lg m-2 pt-2 pb-2">
-    <div class="flex justify-between text-sm border-b border-gray-200 p-2 pt-0">
-      <nobr class="text-gray-800 overflow-hidden overflow-ellipsis w-3/4">{{
+  <div class="detail-container">
+    <div class="detail-box">
+      <nobr class="detail-title">{{
         DetailMsg.title
       }}</nobr>
       <span class="text-yellow-200">{{ DetailMsg.className }}</span>
     </div>
-    <div class="text-xs pl-2 pr-2 text-gray-500 mt-4">
+    <div class="detail-msg">
       <p>
         {{ DetailMsg.detailMsg | ellipsis }}
       </p>

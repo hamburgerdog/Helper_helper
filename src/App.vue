@@ -1,8 +1,9 @@
 <template>
-  <div id="app" class="pt-12 pb-16">
-    <my-header class="fixed top-0 w-full"></my-header>
-    <router-view></router-view>
-    <bottom-nav class="fixed bottom-0 bg-white"></bottom-nav>
+  <div id="app" class="pt-12">
+    <my-header class="fixed top-0 w-full" :AppHeader="AppHeader"></my-header>
+    <router-view>
+      <bottom-nav class="fixed bottom-0 bg-white"></bottom-nav>
+    </router-view>
   </div>
 </template>
 
@@ -13,15 +14,25 @@ import router from './router/index';
 import MyHeader from './components/AppHeader.vue';
 import BottomNav from './components/AppBottomNav.vue';
 
+Vue.prototype.$eventBus = new Vue();
 Vue.use(Icon);
 Vue.use(VanImage);
 
 export default {
+  data() {
+    return {
+      AppHeader: '首页',
+    };
+  },
   components: {
     MyHeader,
     BottomNav,
   },
-  mounted() {},
+  mounted() {
+    this.$eventBus.$on('changeHeaderName', (name) => {
+      this.AppHeader = name;
+    });
+  },
   router,
 };
 </script>

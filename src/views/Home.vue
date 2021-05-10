@@ -19,6 +19,7 @@
       <van-icon class="w-8" :name="opt"></van-icon>
       <p class="text-white text-base font-medium">发布</p>
     </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -79,6 +80,9 @@ export default {
   },
   components: {
     HomeItem,
+  },
+  mounted() {
+    this.$eventBus.$emit('changeHeaderName', '首页');
   },
 };
 </script>

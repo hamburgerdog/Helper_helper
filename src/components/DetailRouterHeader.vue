@@ -8,6 +8,7 @@
         v-for="item in HeaderRouterItems"
         :key="item.id"
         :to="item.path"
+        replace
         active-class="item-active"
       >
         <p class="leading-loose item-p w-16 text-xs">{{ item.name }}</p>

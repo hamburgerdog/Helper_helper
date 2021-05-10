@@ -44,6 +44,9 @@ export default {
     PageHeader,
     DetailItem,
   },
+  mounted() {
+    this.$eventBus.$emit('changeHeaderName', '帮帮公益');
+  },
 };
 </script>
 

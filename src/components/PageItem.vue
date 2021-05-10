@@ -17,7 +17,6 @@ export default {
   props: ['parentInfo'],
   methods: {
     doRouter(path) {
-      console.log(path);
       this.$router.push(path);
     },
   },

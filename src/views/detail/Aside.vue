@@ -49,6 +49,9 @@ export default {
     PageHeader,
     DetailItem,
   },
+  mounted() {
+    this.$eventBus.$emit('changeHeaderName', '帮帮闲置');
+  },
 };
 </script>
 

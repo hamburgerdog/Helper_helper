@@ -6,6 +6,7 @@
         <setting-item :parentInfo="settingItem"></setting-item>
       </div>
     </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -54,6 +55,9 @@ export default {
   components: {
     Login,
     SettingItem,
+  },
+  mounted() {
+    this.$eventBus.$emit('changeHeaderName', '我的');
   },
 };
 </script>
