@@ -24,7 +24,7 @@ export default {
     };
   },
   beforeUpdate() {
-    if (this.$route.path.includes('/detail')) {
+    if (this.$route.path.includes('/detail') || this.$route.path.includes('/myorder')) {
       this.canShow = true;
       return;
     }

@@ -21,7 +21,7 @@ Vue.use(VanImage);
 export default {
   data() {
     return {
-      AppHeader: '首页',
+      AppHeader: '哈喽帮帮',
     };
   },
   components: {

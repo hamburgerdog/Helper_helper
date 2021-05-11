@@ -1,24 +1,22 @@
 <template>
   <div>
     <div
-      class="flex overflow-x-auto flex-shrink-0 bg-white border-b border-gray-200 pt-1 "
+      class="flex overflow-x-auto flex-shrink-0 bg-white border-b border-gray-200 pt-1"
     >
-      <router-link
-        class="flex flex-col items-center text-center text-gray-400"
+      <router-header-item
         v-for="item in HeaderRouterItems"
+        :item="item"
         :key="item.id"
-        :to="item.path"
-        replace
-        active-class="item-active"
-      >
-        <p class="leading-loose item-p w-16 text-xs">{{ item.name }}</p>
-      </router-link>
+      ></router-header-item>
     </div>
   </div>
 </template>
 
 <script>
+import RouterHeaderItem from './RouterHeaderItem.vue';
+
 export default {
+  components: { RouterHeaderItem },
   props: ['HeaderRouterItems'],
 };
 </script>

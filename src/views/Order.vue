@@ -25,26 +25,31 @@ export default {
         {
           id: 1,
           icon: WelfareIcon,
+          path: '/myorder/welfare',
           name: '我的公益',
         },
         {
           id: 2,
           icon: DeliverIcon,
+          path: '/myorder/deliver/post',
           name: '我的快递',
         },
         {
           id: 3,
           icon: HelpIcon,
+          path: '/myorder/helper/post',
           name: '我的求助',
         },
         {
           id: 4,
           icon: AsideIcon,
+          path: '/myorder/aside',
           name: '我的闲置',
         },
         {
           id: 5,
           icon: FoodIcon,
+          path: '/myorder/food/post',
           name: '我的外卖',
         },
       ],
