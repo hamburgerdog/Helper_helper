@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="flex overflow-x-auto flex-shrink-0 bg-white border-b border-gray-200 pt-1"
+      class="flex overflow-x-auto flex-shrink-0 bg-white border-b border-gray-200 pt-1 gap-3"
     >
       <router-header-item
         v-for="item in HeaderRouterItems"
